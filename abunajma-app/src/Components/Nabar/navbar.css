@@ -1,0 +1,40 @@
+/* App.css */
+
+/* Add styles for the Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #0c0c0c; /* Set your desired background color */
+  color: #fbf5f5; /* Set your desired text color */
+}
+
+/* Add styles for the logo */
+.logo h3 {
+  margin: 0;
+}
+
+/* Add styles for the navbar links */
+.navbar-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+}
+
+.navbar-links  {
+  margin-right: 15px;
+  
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #0d0d0d; /* Set your desired text color */
+  margin-right: 10px; /* Set the desired space between navbar links */
+  color: rgb(251, 245, 245);
+}
+
+.navbar-links a:hover {
+  text-decoration: underline; /* Add underline on hover if desired */
+}
