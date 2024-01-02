@@ -1,33 +1,58 @@
-.img-style{
+/* home.css */
+
+.img-style {
     width: 100%;
     height: 100vh;
     position: relative;
-}
-.l-img{
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  .l-img {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     object-fit: cover;
-}
-.img-style::after{
-    content:"";
+    transition: transform 0.5s ease-in-out; /* Add smooth transition on transform property */
+  }
+  
+  .l-img:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+  }
+  
+  .img-style::after {
+    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0.8;
-}
-.top{
+    animation: fadeIn 2s; /* Apply the "fadeIn" animation */
+  }
+  
+  /* Add keyframes for the "fadeIn" animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.8;
+    }
+  }
+  
+  .top {
     height: 100%;
     width: 100%;
-    background-color: rgb(160, 239, 246)
-}
-.top .description p{
+    background-color: darkgoldenrod;
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  .top .description p {
     font-size: 1.4rem;
     font-weight: 200;
     text-decoration: wavy;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(7, 7, 7);
-}
+    color: rgb(243, 243, 243);
+  }
+  
