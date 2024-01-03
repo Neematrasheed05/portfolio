@@ -1,3 +1,15 @@
 .services{
-    background-color: khaki;
+    background-image: url(../../Assets/muslimkids.jpeg);
+    color: rgb(8, 8, 8);
 }
+/* services.css */
+
+.bg-paragraph {
+    background-color: #0b0b0ba0; /* Set your desired background color */
+    padding: 10px; /* Add padding for better visual appearance */
+    border-radius: 5px; /* Add rounded corners if desired */
+    margin-bottom: 15px; /* Adjust the margin between paragraphs */
+    font-weight: 500;
+    color: beige;
+  }
+  

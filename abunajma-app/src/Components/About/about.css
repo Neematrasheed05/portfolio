@@ -42,11 +42,15 @@
 }
 
 .layout p.text-center {
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-top: 20px;
+}
+.layout p.text-justify{
+  font-size: 1.4rem;
 }
 
 /* Optional: Style the header */
 h2.text-center {
   margin-top: 40px;
 }
+
