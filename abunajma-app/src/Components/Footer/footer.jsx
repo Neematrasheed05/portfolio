@@ -19,19 +19,23 @@ function Footer() {
             <Link to='pajmaanajuu@gmail.com' className="text-white">
               <h4 className="d-flex align-items-left">
                 <FaMailBulk size={30} className="mr-2" />
-                
+                <p>Email Address</p>
               </h4>
             </Link>
           </div>
 
           <Link to='https://www.tiktok.com/@abunajmawithkids?_t=8ih3c09GuTG&_r=1' className="text-white d-flex align-items-center">
+          <h4 className="d-flex align-items-left">
             <FaTiktok size={30} className="mr-2" />
-            
+            <p>Tiktok page</p>
+         </h4>
           </Link>
 
           <Link to='https://www.youtube.com/watch?v=PZVeLjOenIA&list=PLd6S1FUPB462VoKeMmtB6L-Muspk1f_04' className="text-white d-flex align-items-center">
+          <h4 className="d-flex align-items-left">
             <FaYoutube size={30} className="mr-2" />
-
+            <p>Youtube Playlist</p>
+            </h4>
           </Link>
 
         </div>

@@ -1,0 +1,52 @@
+.layout{
+    background-image: url(../../Assets/pink-bg.jpeg);
+}
+/* about.css */
+
+.outdoor-img,
+.school-img,
+.studio-img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.outdoor-img:hover,
+.school-img:hover,
+.studio-img:hover {
+  opacity: 0.9;
+}
+
+/* Add a scale effect when scrolling up */
+.outdoor-img.scrolled,
+.school-img.scrolled,
+.studio-img.scrolled {
+  transform: scale(1.1);
+}
+
+/* Optional: Add other styles for the card, title, and text */
+.card {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+/* Optional: Style the container and text at the bottom */
+.layout {
+  padding: 20px;
+}
+
+.layout p.text-center {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Optional: Style the header */
+h2.text-center {
+  margin-top: 40px;
+}
