@@ -1,59 +1,62 @@
-import React , {useState, useEffect} from "react";
-import YouTube from "react-youtube";
-
-import { Card } from "react-bootstrap";
-import Footer from "../Footer/footer";
-import img1 from "../../Assets/img1.jpg";
-import "./home.css";
+import React,{useEffect} from "react";
+import { Element } from "react-scroll";
+import children from "../../Assets/CHILDREN.png"
+import About from "../About/about";
+import Services from "../Services/services";
+import Contact from "../Contact/contact";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
-  const [player, setPlayer] = useState(null);
-
-  const videoOpts = {
-    height: "450",
-    width: "700",
-    playerVars: {
-      autoplay: 1,
-    },
-  };
-
-  const onReady = (event) => {
-    setPlayer(event.target);
-  };
 
   useEffect(() => {
-    if (player) {
-      const stopTime = 52; // Stop the video at 46seconds
-      const interval = setInterval(() => {
-        if (player.getCurrentTime() >= stopTime) {
-          player.pauseVideo();
-          clearInterval(interval);
-        }
-      }, 1000); // Check every second
-    }
-  }, [player]);
+    AOS.init({
+      duration: 1000,
+      once: false, 
+      mirror: true,
+    });
+  }, []);
 
   return (
-    <div className="top">
-      <Card className="img-card">
-      
-      <Card.Title className="text-center welcome-text">Naturing Kids Talents</Card.Title>
-       <Card.Img className="l-img" variant="top" src={img1} alt="landing page" />
-       <div className="video-container">
-          <YouTube
-            videoId="zmlBJehY5zA"
-            opts={videoOpts}
-            onReady={onReady}
+    <>     
+     <Element
+    name="home"
+    className="relative overflow-hidden min-h-screen bg-indigo-900 flex items-center"
+  >
+    <div className="absolute inset-0">
+          <img
+            src={children}
+            alt="Children"
+            className="absolute inset-0 w-full h-full object-cover"
+            data-aos="fade-in"
+            data-aos-duration="1500"
           />
-        </div>
-        <Card.Body>
-          <Card.Text className="lead ">
-            An exceptional Islamic Kids Show currently broadcasted on Horizon TV Kenya. As the pioneering Islamic Kids Show, we take immense pride in our innovative teaching methods and valuable resources designed to inspire the younger generation. Our engaging program extends beyond the screen as we actively visit schools, fostering a dynamic environment where children delve into captivating Prophet stories, explore the depths of Quranic teachings, learn Hadith, recite Duas, and participate in a myriad of exciting activities. Join us on this educational and entertaining journey, where learning becomes an unforgettable adventure for our beloved young audience.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Footer />
+   
     </div>
+  
+  </Element>
+  <Element name="about" className="w-full bg-gradient-to-r from-blue-200 to-blue-600">
+        <div className="container mx-auto px-6 md:px-12 py-24 xl:py-40">
+          <About />
+        </div>
+      </Element>
+
+      <Element name="services" className="container mx-auto px-6 md:px-12 py-24 xl:py-40">
+        <Services/>
+      </Element>
+
+      <Element name="partners" className="container mx-auto px-6 md:px-12 py-24 xl:py-40">
+        <h2 className="text-4xl font-bold text-white">Partners</h2>
+        <p className="text-lg text-gray-300 mt-4">
+          This is the Skills section. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Element>
+
+      <Element name="contact" className="container mx-auto px-6 md:px-12 py-24 xl:py-40">
+       <Contact/>
+      </Element>
+    </>
   );
 }
 

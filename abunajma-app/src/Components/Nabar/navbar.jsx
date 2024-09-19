@@ -1,33 +1,67 @@
-// Navbar.js
-
 import React from "react";
-import { Link } from "react-router-dom";
-import "./navbar.css"
+import { Link as ScrollLink } from "react-scroll";
+
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="logo">
-        <h3>ABUNAJMA WITH KIDS PROGRAM</h3>
-      </div>
-      <div className="navbar-links">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/services">Services</Link>
-          </li>
-          <li>
-            <Link to="/skills">Skills</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          
-        </ul>
+    <nav className="bg-indigo-900 bg-opacity-90 fixed top-0 w-full z-50 shadow-md">
+      <div className="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+        <div className="logo text-white">
+          <h3>ABUNAJMA WITH KIDS PROGRAM</h3>
+        </div>
+        <div className="hidden md:flex items-center">
+          <ul className="flex space-x-6">
+            <li>
+              <ScrollLink
+                to="home"
+                smooth={true}
+                duration={500}
+                className="text-sm uppercase text-white cursor-pointer hover:text-indigo-600"
+              >
+                Home
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="about"
+                smooth={true}
+                duration={500}
+                className="text-sm uppercase text-white cursor-pointer hover:text-indigo-600"
+              >
+                About us
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="services"
+                smooth={true}
+                duration={500}
+                className="text-sm uppercase text-white cursor-pointer hover:text-indigo-600"
+              >
+                Services
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="skills"
+                smooth={true}
+                duration={500}
+                className="text-sm uppercase text-white cursor-pointer hover:text-indigo-600"
+              >
+                Skills
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="text-sm uppercase text-white cursor-pointer hover:text-indigo-600"
+              >
+                Contact
+              </ScrollLink>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
